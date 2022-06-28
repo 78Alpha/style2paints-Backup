@@ -42,7 +42,37 @@ Then just ignore it.
 When the service is ready, you can use the software at
 
     http://127.0.0.1:8233/index.html
+    
+# EXE Build Instructions
 
+*Anaconda environment is recommended!*
+
+Setup Conda environment
+    
+    conda create -n s2p4 python==3.8
+    cd into your s2p_v4_server directory
+    pip install -r requirements.txt
+    Extract wheel from /TensorflowWheel...
+    pip install /TensorflowWheel/tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
+    pip install h5py==2.10.0
+    pip install protobuf==3.20.0
+    conda install pyinstaller
+    py -3.8 -m PyInstaller --noconfirm --onedir --console --icon ./game/favicon.ico --name "style2paintsV4" --add-data "./game;game/" --add-data "./linefiller;linefiller/" --add-data "./nets;nets/" --add-data "./refs;refs/" --add-data "./results;results/" --hidden-import "opencv-contrib-python" --hidden-import "bottle" --hidden-import "h5py" --hidden-import "keras" --hidden-import "scikit-learn" --hidden-import "scikit-image" --hidden-import "llvmlite" --hidden-import "numba" --hidden-import "tqdm" --hidden-import "paste" --hidden-import "tkinter" --collect-all "bottle"  "./server.py"
+    EXE will be found in dist/style2paintsV4
+    
+or python environment
+
+    Install python 3.8 normally...
+    cd into your s2p_v4_server directory
+    pip install -r requirements.txt
+    Extract wheel from /TensorflowWheel...
+    pip install /TensorflowWheel/tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
+    pip install h5py==2.10.0
+    pip install protobuf==3.20.0
+    pip install pyinstaller
+    pyinstaller --noconfirm --onedir --console --icon ./game/favicon.ico --name "style2paintsV4" --add-data "./game;game/" --add-data "./linefiller;linefiller/" --add-data "./nets;nets/" --add-data "./refs;refs/" --add-data "./results;results/" --hidden-import "opencv-contrib-python" --hidden-import "bottle" --hidden-import "h5py" --hidden-import "keras" --hidden-import "scikit-learn" --hidden-import "scikit-image" --hidden-import "llvmlite" --hidden-import "numba" --hidden-import "tqdm" --hidden-import "paste" --hidden-import "tkinter" --collect-all "bottle"  "./server.py"
+    EXE will be found in dist/style2paintsV4
+    
 # Thanks
 
 We thank [hepesu/LineFiller](https://github.com/hepesu/LineFiller) and [V-Sense/DeepNormals](https://github.com/V-Sense/DeepNormals) for the implementation of some basic algrithoms like flooding and normal lighting, though we do not use their models.
