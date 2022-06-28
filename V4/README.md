@@ -1,13 +1,19 @@
 ﻿# Style2Paints V4
 
-This is the source code of the Style2Paints V4.
+This is the source code of the Style2Paints V4. Some things have been altered to allow running on CUDA 11+, meaning RTX 3XXX series support.
 
 # Install
 
-You will need CUDA 10.0, CuDNN 7, Python 3.6
+You will need CUDA 11.1, CuDNN 8, Python 3.8
 
     cd s2p_v4_server
     pip install -r requirements.txt
+    
+    Extract the WHL file from TensorflowWheel
+    
+    pip install /TensorflowWheel/tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
+    pip install h5py==2.10.0
+    pip install protobuf==3.20.0
 
 Then download the model files
 
