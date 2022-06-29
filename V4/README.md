@@ -46,6 +46,7 @@ When the service is ready, you can use the software at
 # EXE Build Instructions
 
 *Anaconda environment is recommended!*
+*Make sure you have CUDA 11.1 installed and CuDNN 8 installed!*
 
 Setup Conda environment
     
@@ -72,7 +73,12 @@ or python environment
     pip install pyinstaller
     pyinstaller --noconfirm --onedir --console --icon ./game/favicon.ico --name "style2paintsV4" --add-data "./game;game/" --add-data "./linefiller;linefiller/" --add-data "./nets;nets/" --add-data "./refs;refs/" --add-data "./results;results/" --hidden-import "opencv-contrib-python" --hidden-import "bottle" --hidden-import "h5py" --hidden-import "keras" --hidden-import "scikit-learn" --hidden-import "scikit-image" --hidden-import "llvmlite" --hidden-import "numba" --hidden-import "tqdm" --hidden-import "paste" --hidden-import "tkinter" --collect-all "bottle"  "./server.py"
     EXE will be found in dist/style2paintsV4
-    
+
+# EXE Prebuilt
+
+magnet (As Backup)
+    magnet:?xt=urn:btih:c30104cfd0972575ac83434bd2ac4f228400f175&dn=style2paintsV4.7z
+
 # Thanks
 
 We thank [hepesu/LineFiller](https://github.com/hepesu/LineFiller) and [V-Sense/DeepNormals](https://github.com/V-Sense/DeepNormals) for the implementation of some basic algrithoms like flooding and normal lighting, though we do not use their models.
