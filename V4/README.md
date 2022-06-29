@@ -76,9 +76,14 @@ or python environment
 
 # EXE Prebuilt
 
-magnet (As Backup)
-    magnet:?xt=urn:btih:c30104cfd0972575ac83434bd2ac4f228400f175&dn=style2paintsV4.7z
+*Magnet* (As Backup)
 
+    magnet:?xt=urn:btih:c30104cfd0972575ac83434bd2ac4f228400f175&dn=style2paintsV4.7z
+    
+*Google Drive*
+
+    https://drive.google.com/file/d/1O-JTlVR8FFBMh3gQeiBlIAQU8CvrbcZ7/view?usp=sharing
+    
 # Thanks
 
 We thank [hepesu/LineFiller](https://github.com/hepesu/LineFiller) and [V-Sense/DeepNormals](https://github.com/V-Sense/DeepNormals) for the implementation of some basic algrithoms like flooding and normal lighting, though we do not use their models.
