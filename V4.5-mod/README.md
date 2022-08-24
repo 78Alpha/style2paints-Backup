@@ -9,9 +9,9 @@ You will need CUDA 11.1, CuDNN 8, Python 3.8
     cd s2p_v4_server
     pip install -r requirements.txt
     
-    Extract the WHL file from TensorflowWheel
+    Get the tensorflow wheel from https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.15.4%2Bnv20.12/py38/CPU%2BGPU
     
-    pip install /TensorflowWheel/tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
+    pip install tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
     pip install h5py==2.10.0
     pip install protobuf==3.20.0
 
@@ -53,8 +53,8 @@ Setup Conda environment
     conda create -n s2p4 python==3.8
     cd into your s2p_v4_server directory
     pip install -r requirements.txt
-    Extract wheel from /TensorflowWheel...
-    pip install /TensorflowWheel/tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
+    Extract wheel from https://github.com/fo40225/tensorflow-windows-wheel/tree/master/1.15.4%2Bnv20.12/py38/CPU%2BGPU
+    pip install tensorflow-1.15.4+nv-cp38-cp38-win_amd64.whl
     pip install h5py==2.10.0
     pip install protobuf==3.20.0
     conda install pyinstaller
